@@ -1,0 +1,49 @@
+/* ==========================================================
+   VARIABLES — colors, fonts, sizes from the design
+   ========================================================== */
+
+:root {
+  /* Fonts (the only thing changed from the design) */
+  --font-heading: "Space Grotesk", Arial, sans-serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-text: #171717;
+  --color-text-muted: #555555;
+  --color-border: #e8e8e8;
+  --color-card: #f6f6f6;
+  --color-control: #ececec;
+
+  --color-green: #227c48;
+  --color-green-light: #e4f1e7;
+
+  --color-orange: #c3410d;
+  --color-orange-dark: #ab2f17;
+  --color-orange-light: #feece8;
+
+  --color-dot-active: #e4652e;
+  --color-dot: #d4d4d4;
+
+  /* Font sizes */
+  --fs-xs: 0.6875rem;   /* 11px */
+  --fs-sm: 0.8125rem;   /* 13px */
+  --fs-base: 0.9375rem; /* 15px */
+  --fs-md: 1.0625rem;   /* 17px */
+  --fs-lg: 1.4375rem;   /* 23px */
+  --fs-xl: 2rem;        /* 32px */
+  --fs-xxl: 2.875rem;   /* 46px */
+
+  /* Radius */
+  --radius-sm: 0.75rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.75rem;
+  --radius-xl: 2rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}

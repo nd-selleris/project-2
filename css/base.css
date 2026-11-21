@@ -1,0 +1,33 @@
+/* ==========================================================
+   BASE — global typography and icons
+   ========================================================== */
+
+html {
+  font-size: 100%; /* 1rem = 16px */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Google Material Symbols */
+.material-symbols-rounded {
+  display: inline-block;
+  width: 1em;
+  overflow: hidden;
+  font-size: 1.375rem;
+  line-height: 1;
+  white-space: nowrap;
+}
