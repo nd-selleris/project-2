@@ -17,13 +17,20 @@
 
   --color-green: #227c48;
   --color-green-light: #e4f1e7;
+  --color-green-hover: #cfe8d6;
+  --color-green-dark: #18603a;
 
   --color-orange: #c3410d;
   --color-orange-dark: #ab2f17;
   --color-orange-light: #feece8;
+  --color-orange-hover: #fcd9d0;
 
   --color-dot-active: #e4652e;
   --color-dot: #d4d4d4;
+
+  /* Shadow and animation */
+  --shadow: 0 0.75rem 2rem rgba(23, 23, 23, 0.12);
+  --transition: 0.2s ease;
 
   /* Font sizes */
   --fs-xs: 0.6875rem;   /* 11px */

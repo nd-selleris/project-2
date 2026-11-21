@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home — Sort Company</title>
+
+    <!-- 1. Normalize -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+    <!-- Fonts and icons from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!-- 2. Reset, 3. Variables, then layout, components, pages and media queries -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Sidebar (on mobile it becomes the top-left icons) -->
+      <aside class="sidebar">
+        <details class="dropdown dropdown--search">
+          <summary class="icon-button" aria-label="Search"><span class="material-symbols-rounded" aria-hidden="true">search</span></summary>
+          <form class="dropdown__panel search" action="https://sortcompany.shop/search" method="get">
+            <label class="visually-hidden" for="search-input">Search products</label>
+            <input class="search__input" id="search-input" type="search" name="q" placeholder="Search products…" />
+            <button class="search__button" type="submit" aria-label="Search"><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+          </form>
+        </details>
+
+        <details class="dropdown dropdown--menu">
+          <summary class="icon-button icon-button--filled" aria-label="Categories"><span class="material-symbols-rounded" aria-hidden="true">apps</span></summary>
+          <nav class="dropdown__panel" aria-label="Categories">
+            <p class="dropdown__title">Categories</p>
+            <ul>
+              <li><a class="dropdown__link" href="index.html#puffer">Jackets</a></li>
+              <li><a class="dropdown__link" href="index.html#ghost-hoodie">Hoodies</a></li>
+              <li><a class="dropdown__link" href="index.html#target-jeans">Jeans</a></li>
+              <li><a class="dropdown__link" href="index.html#kitty-tee">Tees</a></li>
+              <li><a class="dropdown__link" href="index.html#face-beanie">Accessories</a></li>
+            </ul>
+          </nav>
+        </details>
+      </aside>
+
+      <header class="header">
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link nav__link--active" href="home.html" aria-current="page">Home</a></li>
+            <li><a class="nav__link" href="index.html">Products</a></li>
+            <li><a class="nav__link" href="lookbook.html">Lookbook</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="auth">
+          <a class="button button--primary" href="login.html">Log in</a>
+          <a class="button button--light" href="signup.html">Sign up</a>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- Hero -->
+        <article class="featured slider" id="hero">
+          <div class="featured__top">
+            <div class="dots">
+              <input type="radio" name="hero" aria-label="Photo 1" checked />
+              <input type="radio" name="hero" aria-label="Photo 2" />
+              <input type="radio" name="hero" aria-label="Photo 3" />
+              <input type="radio" name="hero" aria-label="Photo 4" />
+            </div>
+            <span class="badge badge--outline">FW<small>26/27</small></span>
+          </div>
+
+          <div class="slides">
+            <img class="featured__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-07_225931.jpg?v=1794090291&width=800" alt="Model wearing the new drop, photo 1" />
+            <img class="featured__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/99C01580-7233-4A30-9622-AC4C8F470875.jpg?v=1789585021&width=800" alt="Model wearing the new drop, photo 2" loading="lazy" />
+            <img class="featured__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/40748809-C073-4D75-8644-E8C08EFEE4F8.jpg?v=1792533345&width=800" alt="Model wearing the new drop, photo 3" loading="lazy" />
+            <img class="featured__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-07_204129.jpg?v=1794080625&width=800" alt="Model wearing the new drop, photo 4" loading="lazy" />
+          </div>
+
+          <h1 class="featured__title">Comeback Drop</h1>
+
+          <ul class="chips">
+            <li class="chip">Puffers – <b>−25°C</b></li>
+            <li class="chip">Hoodies – <b>400 gsm</b></li>
+            <li class="chip">Jeans – <b>RAP+ fit</b></li>
+          </ul>
+
+          <p class="featured__text">
+            Heavy hoodies, baggy jeans and down puffers made for cold city nights. Every
+            piece comes in our signature RAP© fit, with YKK hardware and embroidered details.
+          </p>
+
+          <div class="featured__actions">
+            <a class="cart-button" href="index.html">
+              <span class="material-symbols-rounded" aria-hidden="true">shopping_bag</span>
+              <span class="cart-button__text">Shop the drop</span>
+            </a>
+            <a class="button button--outline" href="lookbook.html">See lookbook</a>
+          </div>
+        </article>
+
+        <!-- New in -->
+        <section class="more">
+          <h2 class="more__title">New in</h2>
+
+          <div class="cards">
+          <article class="card slider" id="camo-hoodie">
+            <div class="card__top">
+            <div class="dots">
+              <input type="radio" name="camo-hoodie" aria-label="Photo 1" checked />
+            </div>
+              <span class="badge">400<small>gsm</small></span>
+            </div>
+            <div class="slides">
+              <img class="card__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/IMG-9240.jpg?v=1792493430&width=400" alt="Camo 360 zip hoodie, photo 1" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Camo Zip Hoodie</h3>
+              <p class="card__text">Boxy hoodie with an embossed print and 360° zipper.</p>
+              <div class="card__actions">
+              <div class="qty qty--small">
+                <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded" aria-hidden="true">remove</span></button>
+                <span class="qty__value">0</span>
+                <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded" aria-hidden="true">add</span></button>
+              </div>
+                <p class="price">$145</p>
+                <button class="cart-button cart-button--icon" aria-label="Add Camo Zip Hoodie to cart"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span></button>
+              </div>
+            </div>
+          </article>
+          <article class="card slider" id="skull-tee">
+            <div class="card__top">
+            <div class="dots">
+              <input type="radio" name="skull-tee" aria-label="Photo 1" checked />
+            </div>
+              <span class="badge">275<small>gsm</small></span>
+            </div>
+            <div class="slides">
+              <img class="card__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/ED4A24A1-593A-4246-B8C1-3B869491E459.jpg?v=1789555281&width=400" alt="Black Skull tee, photo 1" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Skull Tee</h3>
+              <p class="card__text">Black cotton tee with a silkscreen puff print.</p>
+              <div class="card__actions">
+              <div class="qty qty--small">
+                <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded" aria-hidden="true">remove</span></button>
+                <span class="qty__value">0</span>
+                <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded" aria-hidden="true">add</span></button>
+              </div>
+                <p class="price">$45</p>
+                <button class="cart-button cart-button--icon" aria-label="Add Skull Tee to cart"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span></button>
+              </div>
+            </div>
+          </article>
+          <article class="card slider" id="heritage-jeans">
+            <div class="card__top">
+            <div class="dots">
+              <input type="radio" name="heritage-jeans" aria-label="Photo 1" checked />
+            </div>
+              <span class="badge">350<small>gsm</small></span>
+            </div>
+            <div class="slides">
+              <img class="card__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-10_025009.jpg?v=1794275474&width=400" alt="Black Heritage jeans, photo 1" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Heritage Jeans</h3>
+              <p class="card__text">Baggy jeans with a puff print down the leg.</p>
+              <div class="card__actions">
+              <div class="qty qty--small">
+                <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded" aria-hidden="true">remove</span></button>
+                <span class="qty__value">0</span>
+                <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded" aria-hidden="true">add</span></button>
+              </div>
+                <p class="price">$95</p>
+                <button class="cart-button cart-button--icon" aria-label="Add Heritage Jeans to cart"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span></button>
+              </div>
+            </div>
+          </article>
+          <article class="card slider" id="company-cap">
+            <div class="card__top">
+            <div class="dots">
+              <input type="radio" name="company-cap" aria-label="Photo 1" checked />
+            </div>
+              <span class="badge">PU<small>leather</small></span>
+            </div>
+            <div class="slides">
+              <img class="card__image" src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/96E3C044-E46E-400E-AD49-9B3FF5338524.jpg?v=1789478004&width=400" alt="compaNY full cap, photo 1" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">compaNY Full Cap</h3>
+              <p class="card__text">Full-face cap made of PU leather with embroideries.</p>
+              <div class="card__actions">
+              <div class="qty qty--small">
+                <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded" aria-hidden="true">remove</span></button>
+                <span class="qty__value">0</span>
+                <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded" aria-hidden="true">add</span></button>
+              </div>
+                <p class="price">$65</p>
+                <button class="cart-button cart-button--icon" aria-label="Add compaNY Full Cap to cart"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span></button>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

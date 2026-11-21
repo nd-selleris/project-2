@@ -1,0 +1,136 @@
+/* ==========================================================
+   PAGES — parts used only on some pages
+   (Lookbook, Log in, Sign up)
+   ========================================================== */
+
+/* Main area variants */
+.main--column {
+  flex-direction: column;
+}
+
+.main--center {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ---------- Page heading (Lookbook) ---------- */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xs) var(--space-lg);
+}
+
+.page-head__title {
+  font-size: var(--fs-xxl);
+}
+
+.page-head__text {
+  max-width: 26rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Lookbook gallery ---------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.look {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 15rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.look:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-0.25rem);
+}
+
+.look__image {
+  width: 100%;
+  height: 22rem;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.look__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.look:hover .look__caption {
+  color: var(--color-green);
+}
+
+/* ---------- Log in / Sign up form ---------- */
+.form-card {
+  width: 100%;
+  max-width: 28rem;
+  padding: 2.5rem 2rem 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.form-card__title {
+  font-size: var(--fs-xl);
+}
+
+.form-card__text {
+  margin: var(--space-xs) 0 var(--space-lg);
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.field__label {
+  font-weight: 700;
+}
+
+.field__input {
+  height: 3rem;
+  padding: 0 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition);
+}
+
+.field__input:hover,
+.field__input:focus {
+  border-color: var(--color-text);
+}
+
+.form-card__alt {
+  margin-top: var(--space-md);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.form-card__alt a {
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.form-card__alt a:hover {
+  text-decoration: underline;
+}

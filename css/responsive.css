@@ -39,7 +39,7 @@
 @media (max-width: 48em) {
   .app {
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       "side auth"
       "nav nav"
@@ -59,7 +59,7 @@
     border: 0;
   }
 
-  .sidebar .icon-button--filled {
+  .dropdown--menu {
     order: -1;
   }
 
@@ -110,9 +110,38 @@
     flex-wrap: wrap;
   }
 
-  .featured .cart-button {
+  .featured .cart-button,
+  .featured__actions .button {
     flex-basis: 100%;
     height: 3.125rem;
+  }
+
+  /* Dropdowns open below the icons */
+  .dropdown__panel {
+    top: calc(100% + 0.5rem);
+    left: 0;
+  }
+
+  .search {
+    min-width: calc(100vw - 2.5rem);
+  }
+
+  .dropdown--search .search {
+    left: -3.75rem; /* search icon is the second icon on mobile */
+  }
+
+  /* Lookbook and forms */
+  .page-head__title {
+    font-size: var(--fs-xl);
+  }
+
+  .look__image {
+    height: 18rem;
+  }
+
+  .form-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 1.5rem;
   }
 
   .cart-button__text {
@@ -170,11 +199,25 @@
     font-size: var(--fs-sm);
   }
 
-  .card__image {
+  .card .slides {
     grid-area: img;
     align-self: center;
+  }
+
+  .card__image {
     height: 6rem;
     margin: 0;
+  }
+
+  .card--info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .card--info .card__title {
+    font-size: var(--fs-lg);
   }
 
   .card__title {
