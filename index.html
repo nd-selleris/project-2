@@ -20,26 +20,198 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
 
-    <!-- 2. Reset, 3. Variables, base styles -->
+    <!-- 2. Reset, 3. Variables, then layout and components -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
   </head>
 
   <body>
     <div class="app">
+      <!-- Sidebar (on mobile it becomes the top-left icons) -->
       <aside class="sidebar">
-        <!-- search + menu icons -->
-        <span class="material-symbols-rounded">search</span>
-        <span class="material-symbols-rounded">apps</span>
+        <button class="icon-button" aria-label="Search">
+          <span class="material-symbols-rounded">search</span>
+        </button>
+        <button class="icon-button icon-button--filled" aria-label="Menu">
+          <span class="material-symbols-rounded">apps</span>
+        </button>
       </aside>
 
       <header class="header">
-        <!-- navigation + log in / sign up -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#">Home</a></li>
+            <li><a class="nav__link nav__link--active" href="#">Products</a></li>
+            <li><a class="nav__link" href="#">Lookbook</a></li>
+            <li><a class="nav__link" href="#">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="auth">
+          <a class="button button--primary" href="#">Log in</a>
+          <a class="button button--light" href="#">Sign up</a>
+        </div>
       </header>
 
       <main class="main">
-        <!-- featured product + product cards (Sort Company) -->
+        <!-- Featured product -->
+        <article class="featured">
+          <div class="featured__top">
+            <span class="dots"><span></span><span></span><span></span><span></span></span>
+            <span class="badge badge--outline">−25<small>°C</small></span>
+          </div>
+
+          <img
+            class="featured__image"
+            src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-07_225902.jpg?v=1794090291&width=800"
+            alt="Black 360 zip down puffer jacket"
+          />
+
+          <h1 class="featured__title">BLK Puffer Jacket</h1>
+
+          <ul class="chips">
+            <li class="chip">Fit – <b>Boxy</b></li>
+            <li class="chip">Zippers – <b>360°</b></li>
+            <li class="chip">Hardware – <b>YKK</b></li>
+            <li class="chip">Pockets – <b>3</b></li>
+          </ul>
+
+          <p class="featured__text">
+            The warmest piece of the OG drop. A black down puffer with embroideries, a large
+            hood and 360° metal zippers. Water-resistant and ready for winters down to −25°C.
+          </p>
+
+          <div class="featured__actions">
+            <div class="qty">
+              <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded">remove</span></button>
+              <span class="qty__value">0</span>
+              <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded">add</span></button>
+            </div>
+            <p class="price price--big">$250</p>
+            <button class="cart-button">
+              <span class="material-symbols-rounded">shopping_cart</span>
+              <span class="cart-button__text">Add to Cart</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- More products -->
+        <section class="more">
+          <h2 class="more__title">More products</h2>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__top">
+                <span class="dots"><span></span><span></span><span></span><span></span></span>
+                <span class="badge">400<small>gsm</small></span>
+              </div>
+              <img
+                class="card__image"
+                src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/92C52129-2713-4468-8D12-A380AF17B3A3.jpg?v=1792066631&width=400"
+                alt="Purple Ghost 360 zip hoodie"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Ghost Zip Hoodie</h3>
+                <p class="card__text">Heavy cotton hoodie with a glow-in-the-dark print and rhinestones.</p>
+                <div class="card__actions">
+                  <div class="qty qty--small">
+                    <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded">remove</span></button>
+                    <span class="qty__value">0</span>
+                    <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded">add</span></button>
+                  </div>
+                  <p class="price">$145</p>
+                  <button class="cart-button cart-button--icon" aria-label="Add to cart">
+                    <span class="material-symbols-rounded">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <span class="dots"><span></span><span></span><span></span><span></span></span>
+                <span class="badge">350<small>gsm</small></span>
+              </div>
+              <img
+                class="card__image"
+                src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-09_025228.jpg?v=1794189569&width=400"
+                alt="Original Target jeans in black"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Target Jeans</h3>
+                <p class="card__text">Baggy black jeans with embroideries and a YKK metal zipper.</p>
+                <div class="card__actions">
+                  <div class="qty qty--small">
+                    <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded">remove</span></button>
+                    <span class="qty__value">0</span>
+                    <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded">add</span></button>
+                  </div>
+                  <p class="price">$75</p>
+                  <button class="cart-button cart-button--icon" aria-label="Add to cart">
+                    <span class="material-symbols-rounded">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <span class="dots"><span></span><span></span><span></span><span></span></span>
+                <span class="badge">270<small>gsm</small></span>
+              </div>
+              <img
+                class="card__image"
+                src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/42A6C65E-A6C3-4715-A3EB-9E9266ED9CBB.jpg?v=1792533345&width=400"
+                alt="Pink Kitty tee"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Kitty Tee Pink</h3>
+                <p class="card__text">Boxy cotton tee with a silkscreen print on the front.</p>
+                <div class="card__actions">
+                  <div class="qty qty--small">
+                    <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded">remove</span></button>
+                    <span class="qty__value">0</span>
+                    <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded">add</span></button>
+                  </div>
+                  <p class="price">$40</p>
+                  <button class="cart-button cart-button--icon" aria-label="Add to cart">
+                    <span class="material-symbols-rounded">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <span class="dots"><span></span><span></span><span></span><span></span></span>
+                <span class="badge">OS<small>size</small></span>
+              </div>
+              <img
+                class="card__image"
+                src="https://cdn.shopify.com/s/files/1/0896/0756/9733/files/Bazaart_2026-11-07_203015.jpg?v=1794080625&width=400"
+                alt="Face beanie"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Face Beanie</h3>
+                <p class="card__text">Knitted beanie with a liquid metal effect print.</p>
+                <div class="card__actions">
+                  <div class="qty qty--small">
+                    <button class="qty__btn" aria-label="Less"><span class="material-symbols-rounded">remove</span></button>
+                    <span class="qty__value">0</span>
+                    <button class="qty__btn qty__btn--plus" aria-label="More"><span class="material-symbols-rounded">add</span></button>
+                  </div>
+                  <p class="price">$45</p>
+                  <button class="cart-button cart-button--icon" aria-label="Add to cart">
+                    <span class="material-symbols-rounded">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
   </body>
